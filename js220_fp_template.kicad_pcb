@@ -7,8 +7,8 @@
   (paper "A4")
   (title_block
     (title "Joulescope JS220 Front Panel Template")
-    (date "2022-10-23")
-    (rev "1.1")
+    (date "2022-11-12")
+    (rev "1.2")
     (company "Alvaro Prieto")
   )
 
@@ -98,14 +98,14 @@
   (net 0 "")
   (net 1 "/V+")
   (net 2 "/V-")
-  (net 3 "I+")
+  (net 3 "/I+")
   (net 4 "/I-")
   (net 5 "/CH_GND")
 
   (footprint "Joulescope:MOUNTING_HOLE_3.3MM" locked (layer "F.Cu")
     (tedit 0) (tstamp 758396e4-c700-4910-939a-a0a904691180)
     (at 130.95 100)
-    (property "Sheetfile" "File: js220_fp_template.kicad_sch")
+    (property "Sheetfile" "js220_fp_template.kicad_sch")
     (property "Sheetname" "")
     (path "/b7c1e4a5-842e-4ccd-b84f-ed35a63464ff")
     (attr smd)
@@ -123,7 +123,7 @@
   (footprint "Joulescope:MOUNTING_HOLE_3.5_W_KO" locked (layer "F.Cu")
     (tedit 0) (tstamp c4ed14b4-d5c6-4a67-9d70-4dc00c38a02d)
     (at 193.71 100)
-    (property "Sheetfile" "File: js220_fp_template.kicad_sch")
+    (property "Sheetfile" "js220_fp_template.kicad_sch")
     (property "Sheetname" "")
     (path "/c2a1284c-0b17-4c8e-a80e-bc449b807573")
     (attr smd)
@@ -215,7 +215,7 @@
   (footprint "Joulescope:MOUNTING_HOLE_3.5_W_KO" locked (layer "F.Cu")
     (tedit 0) (tstamp e361454e-e3a5-438a-bb2c-564c8b12edc6)
     (at 106.29 100)
-    (property "Sheetfile" "File: js220_fp_template.kicad_sch")
+    (property "Sheetfile" "js220_fp_template.kicad_sch")
     (property "Sheetname" "")
     (path "/0b1be3d8-792f-4a8b-81f7-4b6a057d685e")
     (attr smd)
@@ -307,7 +307,7 @@
   (footprint "Joulescope:TINY_TP" locked (layer "F.Cu")
     (tedit 0) (tstamp ef92b2af-3268-46db-b2de-8a0e56fdbbe0)
     (at 169.6 89.5)
-    (property "Sheetfile" "File: js220_fp_template.kicad_sch")
+    (property "Sheetfile" "js220_fp_template.kicad_sch")
     (property "Sheetname" "")
     (path "/0242b6fa-8473-4a8c-a855-7443da774662")
     (attr smd)
@@ -326,7 +326,7 @@
   (footprint "Joulescope:SAMTEC_TSM-103-01-S-DV-A" locked (layer "B.Cu")
     (tedit 63555FEA) (tstamp 18e11b3c-ef31-4c08-8514-04eef65f3ffb)
     (at 150 101.29)
-    (property "Sheetfile" "File: js220_fp_template.kicad_sch")
+    (property "Sheetfile" "js220_fp_template.kicad_sch")
     (property "Sheetname" "")
     (path "/ff751d8a-9305-492e-b66c-b663379c0659")
     (attr through_hole)
@@ -441,7 +441,7 @@
     (pad "" np_thru_hole circle locked (at 1.27 0) (size 1.73 1.73) (drill 1.73) (layers *.Cu *.Mask) (tstamp 76be4def-6c62-42b3-b329-2a49efcf81ed))
     (pad "" np_thru_hole circle locked (at -1.27 0) (size 1.73 1.73) (drill 1.73) (layers *.Cu *.Mask) (tstamp f9f45f01-1d1e-4380-ac0a-66e6dabf84b0))
     (pad "1" smd custom locked (at 2.54 2.475) (size 0.8 2.5) (layers "B.Cu")
-      (net 4 "/I-") (pinfunction "I-") (pintype "power_out") (zone_connect 0)
+      (net 3 "/I+") (pinfunction "I+") (pintype "power_in") (zone_connect 0)
       (options (clearance outline) (anchor rect))
       (primitives
         (gr_poly (pts
@@ -453,7 +453,7 @@
           ) (width 0.01) (fill yes))
       ) (tstamp 8123e131-f8cb-4ae1-94cb-0d4aed7d59c3))
     (pad "2" smd custom locked (at 2.54 -2.475) (size 0.8 2.5) (layers "B.Cu")
-      (net 4 "/I-") (pinfunction "I-") (pintype "power_out") (zone_connect 0)
+      (net 3 "/I+") (pinfunction "I+") (pintype "passive") (zone_connect 0)
       (options (clearance outline) (anchor rect))
       (primitives
         (gr_poly (pts
@@ -465,7 +465,7 @@
           ) (width 0.01) (fill yes))
       ) (tstamp 2399edea-233e-4e29-882f-20b224562ec9))
     (pad "3" smd custom locked (at 0 2.475) (size 0.8 2.5) (layers "B.Cu")
-      (net 3 "I+") (pinfunction "I+") (pintype "power_in") (zone_connect 0)
+      (net 4 "/I-") (pinfunction "I-") (pintype "power_out") (zone_connect 0)
       (options (clearance outline) (anchor rect))
       (primitives
         (gr_poly (pts
@@ -478,7 +478,7 @@
           ) (width 0.01) (fill yes))
       ) (tstamp e3bfe251-8864-4847-8be0-2037c49d8a99))
     (pad "4" smd custom locked (at 0 -2.475) (size 0.8 2.5) (layers "B.Cu")
-      (net 3 "I+") (pinfunction "I+") (pintype "power_in") (zone_connect 0)
+      (net 4 "/I-") (pinfunction "I-") (pintype "passive") (zone_connect 0)
       (options (clearance outline) (anchor rect))
       (primitives
         (gr_poly (pts
